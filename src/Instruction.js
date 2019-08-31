@@ -1,5 +1,5 @@
 import React from 'react';
-
+import beginnerClip from './assets/clips/draw-beginner.mp3'
 class Instruction extends React.Component {
 
   constructor() {
@@ -9,7 +9,9 @@ class Instruction extends React.Component {
   render() {
   return (
     <div>
-      <h1>{this.props.question}</h1>
+      <h1>{this.props.name}</h1>
+      <span dangerouslySetInnerHTML={{__html: this.props.question}} ></span>
+      <img src={this.props.answer} hidden={this.props.hide}/>
     </div>
     )
   }
